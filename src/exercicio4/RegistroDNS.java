@@ -9,16 +9,16 @@ package exercicio4;
  *
  * @author jpeit
  */
-public class Dominio {
+public class RegistroDNS {
 
     private String dominio;
     private String ip;
     private int porta;
 
-    public Dominio() {
+    public RegistroDNS() {
     }
 
-    public Dominio(String dominio, String ip, int porta) {
+    public RegistroDNS(String dominio, String ip, int porta) {
         this.dominio = dominio;
         this.ip = ip;
         this.porta = porta;
