@@ -13,12 +13,20 @@ public class Main {
         double a = 6;
         double b = 2;
 
-        double ma[][] = {{1, 0, 2}, {-1, 3, 1}};
-        double mb[][] = {{1, 0, 2}, {-1, 3, 1}};
-        double mc[][] = {{3, 1}, {2, 1}, {1, 0}};
+        double ma[][] = {{1, 0, 2},
+                        {-1, 3, 1}};
+                        
+        double mb[][] = {{1, 0, 2}, 
+                        {-1, 3, 1}};
+        
+        double mc[][] = {{3, 1}, 
+                        {2, 1}, 
+                        {1, 0}};
+        
         double mx[][] = {};
 
-        double md[][] = {{1, 0, 2, 0}, {-1, 3, 1, 2}};
+        double md[][] = {{1, 0, 2, 0},
+                        {-1, 3, 1, 2}};
 
         System.out.println(a + " + " + b + " = " + mat.somar(a, b));
         System.out.println(a + " - " + b + " = " + mat.subtrair(a, b));
@@ -29,29 +37,34 @@ public class Main {
             System.out.println(a + " / 0  = " + mat.dividir(a, 0));
 
         } catch (ArithmeticException e) {
-            System.out.println("Houve divisão por zero");
+            System.out.println("Houve divisão por zero\n");
         }
 
         System.out.println();
         System.out.println("Matriz A");
         imprimeMatriz(ma);
+        
         System.out.println("Matriz B");
         imprimeMatriz(mb);
-        System.out.println("Matriz Soma");
+
+        System.out.println("\n\nMatriz Soma");
         imprimeMatriz(mat.somar(ma, mb));
-        System.out.println("Matriz Substracao");
+
+        System.out.println("\n\nMatriz Subtracao");
         imprimeMatriz(mat.subtrair(ma, mb));
 
-        System.out.println("Matriz A");
+        System.out.println("\nMatriz A");
         imprimeMatriz(ma);
+
         System.out.println("Matriz C");
         imprimeMatriz(mc);
+
         System.out.println("Matriz Multiplicacao A x C");
 
         try {
             imprimeMatriz(mat.multiplicar(ma, mc));
         } catch (MatrizIncompativelException ex) {
-            ex.printStackTrace();
+            System.out.println("As Matrizes são diferentes");
         }
 
         System.out.println("Matriz Multiplicacao A x B");
@@ -64,6 +77,7 @@ public class Main {
 
         System.out.println("Matriz A");
         imprimeMatriz(ma);
+        
         System.out.println("Matriz Multiplicacao Escalar 2");
         imprimeMatriz(mat.multiplicar(ma, 2));
     }
