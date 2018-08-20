@@ -17,8 +17,8 @@ public interface IDNS {
     public String lookup(String dominio)
             throws DominioNaoRegistrado;
 
-    public void unbind(String dominio);
-    throws DominioNaoRegistrado;
+    public void unbind(String dominio)
+            throws DominioNaoRegistrado;
 
     public String[] list();
 }

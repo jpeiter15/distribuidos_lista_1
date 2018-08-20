@@ -24,6 +24,10 @@ public class RegistroDNS {
         this.porta = porta;
     }
 
+    RegistroDNS(String dominio) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public String getDominio() {
         return dominio;
     }
